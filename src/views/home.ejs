@@ -1,0 +1,27 @@
+<% layout('layouts/main') -%>
+
+
+
+
+<section class="contenedor2">
+    <% if(data.length > 0) { %>
+      <% for(var i=0; i<data.length; i++) {%>
+        <div class="card m-top">
+          <div class="card-body">
+            <h3 style="background-color: #cccfcf;" class="centrar">Empresa <%= data[i]._empresa.nombre %></h3 >
+              <p><%= data[i].fecha %></p>
+              <h3>Requiere</h3>
+              <p><%= data[i].titulo %></p>
+              <p><%= data[i].descripcion %></p>
+              <form action="/api/users/vacante/addSolicitud" method="POST">
+                <input type="hidden" name="vacanteId" value="<%= data[i].id %>">
+                <button type="submit" class="btn btn-primary">Postular a esta vacante</button>
+              </form>
+              
+          </div>
+        </div>
+      <% } %>
+      <% } else { %>
+        <h2 class="centrar">No hay vacantes para mostrar</h2>
+    <% } %>
+</section>

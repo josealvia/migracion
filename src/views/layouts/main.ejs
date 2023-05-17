@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .marginauto {
+            margin: 20px auto;
+        }
+
+        .contenedor2 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h2 {
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .letra1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 30px;
+        }
+
+        .pad {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .blanco {
+            color: white !important;
+        }
+
+        .centrar {
+            text-align: center;
+        }
+
+        .footer {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .contenedor-footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .redes {
+            text-align: center;
+        }
+
+        .redes i {
+            font-size: 50px;
+            margin-right: 20px;
+        }
+
+        .rojo {
+            color: rgb(235, 50, 50);
+        }
+
+        .verde {
+            color: greenyellow;
+        }
+
+        .footer span {
+            margin-right: 5px;
+        }
+
+        .producto-img {
+            margin: 20px auto;
+            width: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .producto-img img {
+            height: 100%;
+            max-width: 500px;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .secciones a {
+            text-decoration: none;
+            color: rgb(33, 164, 204);
+        }
+
+
+        /*  */
+        .form {
+            color: black;
+            width: 30%;
+            margin: auto;
+            height: auto;
+            border: 1px solid rgb(145, 143, 143);
+            padding: 20px;
+            border-radius: 10px;
+
+
+
+        }
+
+        .pp {
+            text-align: center;
+            width: 70%;
+        }
+
+        .button {
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        .form1 {
+            text-align: left;
+            width: 140%;
+        }
+
+        .formedit {
+            color: black;
+            width: 30%;
+            margin: auto;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .conte {
+
+            float: left;
+            height: auto;
+            width: 40%;
+            text-align: center;
+
+
+        }
+
+        .img {
+            width: 30%;
+        }
+
+        .letra {
+            text-align: center;
+        }
+        .m-top{
+            margin: 20px auto;
+        }
+    </style>
+    <title>Pasint</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #46a59d;">
+        <div class="container-fluid contenedor">
+            <a class="navbar-brand letra1" href="/">Pasint</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <% if(user) { %>
+                        <li class="nav-item">
+                            <a class="nav-link active blanco" aria-current="page" href="/api/users">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active blanco" aria-current="page" href="/api/users">Empresas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active blanco" aria-current="page" href="/api/users">Blog</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link active blanco" aria-current="page" href="/api/users/usuario/perfil">Mi
+                                perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active blanco" aria-current="page" href="/api/users/logout">Salir</a>
+                        </li>
+
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link active blanco" aria-current="page" href="/api/users">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active blanco" aria-current="page" href="/api/users">Empresas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active blanco" aria-current="page" href="/api/users">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active blanco" aria-current="page" href="/api/users/login">Signin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active blanco" aria-current="page"
+                                    href="/api/users/registrar">Signup</a>
+                            </li>
+
+                            <% } %>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!-- Contenido aqui -->
+    <%- body %>
+</body>
+
+<footer class="footer bg-dark">
+    <section class="contenedor contenedor-footer">
+        <div class="centrar">
+            <h2 class="blanco">Contacto</h2>
+            <p class="blanco centrar"><i class="fas fa-phone verde"></i> 0993899824</p>
+            <p class="blanco centrar"><i class="far fa-envelope verde"></i> ayuda@pasint.com</p>
+            <p class="blanco centrar"><i class="fas fa-map-marker-alt rojo"></i> Manta-Manabí</p>
+        </div>
+        <div class="redes">
+            <h2 class="blanco">Redes</h2>
+            <a href=""><i class="fab fa-facebook blanco"></i></a>
+            <a href=""><i class="fab fa-twitter blanco"></i></a>
+            <a href=""><i class="fab fa-instagram blanco"></i></a>
+        </div>
+        <div class="blanco centrar">
+            <a class="letra1 blanco" href="/">Pasint</a>
+            <p>Pasint es una aplicación donde empresas podran publicar vacantes de empleo y practicas profesionales para
+                estudiantes y profesionales</p>
+        </div>
+    </section>
+    <p class="blanco centrar">Todos los derechos reservados @2021<i class="fas fa-user-check"></i></p>
+
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</html>

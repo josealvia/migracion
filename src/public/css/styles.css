@@ -1,0 +1,151 @@
+
+.contenedor{
+    max-width: 1200px ;
+    margin: 0 auto;
+}
+
+.marginauto{
+    margin: 20px auto;
+}
+.contenedor2{
+    max-width: 800px ;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h2{
+    margin: 20px 0;
+}
+
+p{
+    text-align: justify;
+}
+
+.letra1{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+.pad{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.blanco{
+    color: white !important;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer a{
+    text-decoration: none;
+}
+.contenedor-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes{
+    text-align: center;
+}
+.redes i{
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.rojo{
+    color: rgb(235, 50, 50);
+}
+
+.verde{
+    color: greenyellow;
+}
+
+.footer span{
+    margin-right: 5px;
+}
+
+.producto-img{
+    margin: 20px auto;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.producto-img img{
+    height: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.secciones a{
+    text-decoration: none;
+    color: rgb(33, 164, 204);
+}
+
+
+/*  */ 
+.form{
+    color: black;
+    width: 30%;
+    margin: auto;
+    height: auto;
+    border: 1px solid rgb(145, 143, 143);
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+
+}
+.pp{
+    text-align: center;
+    width: 70%;
+}
+
+.button{
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+
+}
+.form1{
+    text-align: left;
+    width: 140%;    
+}
+.formedit{
+    color: black;
+    width: 30%;
+    margin: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+
+}
+.conte{ 
+    
+    float: left;
+    height: auto;
+    width: 40%;
+    text-align: center;
+
+    
+}
+.img{
+    width: 30%;
+}
+.letra{
+    text-align: center;
+}

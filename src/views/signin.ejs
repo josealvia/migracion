@@ -1,0 +1,36 @@
+
+<% layout('layouts/main') -%>
+<div class="form-group">
+    <br>
+    <br>
+
+    <form class="form" action="/api/users/usuario/signin" method="POST">
+        
+        <h2 class="pp">Iniciar Sesión</h2>
+        <hr>
+        <input type="hidden" name="_id" value="">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" value="" placeholder="Contraseña" required>
+        </div>
+        <div class="button">
+        <button type="submit" class="btn btn-primary button">Iniciar</button>
+        </div>
+        
+        <p>¿No tienes una cuenta? <a href="/api/users/registrar">Registrate</a></p>
+
+        <% if(signinMessage.length >0){ %>
+            <div class="alert alert-danger"><%= signinMessage %></div>
+
+        <% } %>
+
+
+    </form>
+    <br >
+    <br>
+    
+</div>

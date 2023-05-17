@@ -1,0 +1,63 @@
+
+<% layout('layouts/main') -%>
+<div class="form-group">
+    <br>
+
+    <form class="form" action="/api/users/usuario/signup" method="POST">
+        
+        <h2 class="pp">Registrate</h2> 
+        <hr>
+        <input type="hidden" name="_id" value="">
+        <div>
+            <label for="nombre">Nombres</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="" placeholder="Nombres">
+        </div>
+        <div>
+            <label for="apellido">Apellidos</label>
+            <input type="text"  class="form-control" id="apellido" name="apellido" value="" placeholder="Apellidos">
+        </div>
+        <div>
+            <label for="cedula">Nº de cédula</label>
+            <input type="text"  class="form-control" id="cedula" name="cedula" value="" placeholder="Nº de cédula">
+        </div>
+        
+        <div>
+            <label for="telefono">Telefono</label>
+            <input type="text" class="form-control" id="telefono" name="telefono" value="" placeholder="Telefono">
+        </div>
+        <div>
+            <label for="direccion">Dirección</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" value="" placeholder="Dirección">
+        </div>
+        <div>
+            <label for="formacion">Formacion</label>
+            <textarea class="form-control" name="formacion" id="formacion" ></textarea>
+        </div>
+        <div>
+            <label for="experiencia">Experiencia Laboral</label>
+            <textarea class="form-control" name="experiencia" id="experiencia" ></textarea>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email" value="" placeholder="Email">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" value="" placeholder="Contraseña">
+        </div>
+        <div class="button">
+        <button type="submit" class="btn btn-primary button">Registrase</button>
+        </div>
+        <p class="pp">Al registrarte, aceptas las condiciones y politicas.</p>
+        <p>¿Tienes una cuenta? <a href="/api/users/login">Inicia sesión</a></p>
+
+        <% if(signupMessage.length >0){ %>
+            <div class="alert alert-danger"><%= signupMessage %></div>
+
+        <% } %>
+        
+
+
+    </form>
+    <br>
+</div>
